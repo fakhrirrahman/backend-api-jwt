@@ -2,14 +2,19 @@ use std::net::SocketAddr;
 use axum::{Extension, Router};
 use dotenvy::dotenv;
 
+mod config;
 
 
 #[tokio::main]
 async fn main(){
+
     dotenv().ok();
 
+    let db = config::database::connect().await;
+
+
     let app = Router::new()
-        .layer(Extension(()));
+        .layer(Extension((db)));
 
     let port = std::env::var("APP_PORT")
         .ok()
