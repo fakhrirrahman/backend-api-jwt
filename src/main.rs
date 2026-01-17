@@ -14,7 +14,7 @@ async fn main(){
 
 
     let app = Router::new()
-        .layer(Extension((db)));
+        .layer(Extension(db));
 
     let port = std::env::var("APP_PORT")
         .ok()
