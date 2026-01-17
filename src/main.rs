@@ -3,6 +3,8 @@ use axum::{Extension, Router};
 use dotenvy::dotenv;
 
 mod config;
+mod utils;
+mod models;
 
 
 #[tokio::main]
