@@ -1,6 +1,7 @@
 use serde::Serialize;
 use chrono::{DateTime, Utc};
 
+#[derive(Serialize)]
 pub struct User {
     pub id: i64,
     pub name: String,
