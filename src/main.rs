@@ -6,6 +6,7 @@ mod config;
 mod utils;
 mod models;
 mod middlewares;
+mod schemas;
 
 
 #[tokio::main]
