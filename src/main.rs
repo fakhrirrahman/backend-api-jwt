@@ -5,6 +5,7 @@ use dotenvy::dotenv;
 mod config;
 mod utils;
 mod models;
+mod middlewares;
 
 
 #[tokio::main]
